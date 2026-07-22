@@ -22,4 +22,7 @@ body {
   font-size: 100px;
   font-weight: 600;
   font-family: "Inconsolata", serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
