@@ -19,9 +19,8 @@ body {
   width: 95%;
   height: 80%;
   color: rgb(0, 255, 0);
-  font-size: 100px;
   font-weight: 600;
-  font-family: "Inconsolata", serif;
+  font-family: "Inconsolata";
   display: flex;
   justify-content: center;
   align-items: center;
@@ -30,4 +29,6 @@ body {
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
+  container-type: inline-size;
+  font-size: clamp(20px, 10cqw, 100px);
 }
