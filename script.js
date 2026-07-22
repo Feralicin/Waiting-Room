@@ -1,8 +1,13 @@
 document.addEventListener("DOMContentLoaded", () => {
     const Target = new Date(Date.UTC(2032, 9, 1, 11, 21, 2))
     const Text = document.querySelector(".time")
+    const Notice = document.querySelector(".notice")
     const Sound = new Audio("tick.ogg")
     Sound.volume = 0.8
+
+    Sound.addEventListener("canplaythrough", () => {
+        Notice.classList.add("hide")
+    })
 
     let Old = Text.textContent
     
@@ -20,17 +25,11 @@ document.addEventListener("DOMContentLoaded", () => {
 
         if (Old !== New) {
             Sound.currentTime = 0
-            
-            var Result = Sound.play()
-            
-            if (Result !== undefined) {
-                Result.catch(() => {})
-            }
-            
+            Sound.play().catch(() => {})
             Old = New
         }
     }
     
     UpdateCountdown()
-    setInterval(UpdateCountdown, 50)
+    setInterval(UpdateCountdown, 500)
 })
