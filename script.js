@@ -20,7 +20,13 @@ document.addEventListener("DOMContentLoaded", () => {
 
         if (Old !== New) {
             Sound.currentTime = 0
-            Sound.play()
+            
+            var Result = Sound.play()
+            
+            if (Result !== undefined) {
+                Result.catch(() => {})
+            }
+            
             Old = New
         }
     }
