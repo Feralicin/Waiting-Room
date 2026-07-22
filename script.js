@@ -5,10 +5,6 @@ document.addEventListener("DOMContentLoaded", () => {
     const Sound = new Audio("tick.ogg")
     Sound.volume = 0.8
 
-    Sound.addEventListener("canplaythrough", () => {
-        Notice.classList.add("hide")
-    })
-
     let Old = Text.textContent
     
     function UpdateCountdown() {
@@ -25,7 +21,13 @@ document.addEventListener("DOMContentLoaded", () => {
 
         if (Old !== New) {
             Sound.currentTime = 0
-            Sound.play().catch(() => {})
+        
+            Sound.play()
+                .then(() => {
+                    Notice.classList.add("hide")
+                })
+                .catch(() => {})
+        
             Old = New
         }
     }
