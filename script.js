@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", () => {
     const Target = new Date(Date.UTC(2032, 9, 1, 11, 21, 2))
     const Text = document.querySelector(".time")
-    const Sound = new Audio("Tick.ogg")
+    const Sound = new Audio("tick.ogg")
     Sound.volume = 0.8
 
     let Old = Text.textContent
