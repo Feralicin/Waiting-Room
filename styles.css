@@ -32,3 +32,24 @@ body {
   container-type: inline-size;
   font-size: clamp(20px, 10cqw, 100px);
 }
+
+.notice {
+  color: rgba(0, 255, 0, 0.5);
+  top: 60%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  pointer-events: none;
+  user-select: none;
+  animation: pulse 2s infinite ease-in-out;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 0.5;
+  }
+
+  50% {
+    opacity: 0.2;
+  }
+}
