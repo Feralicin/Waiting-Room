@@ -49,6 +49,20 @@ body {
   font-family: "Inconsolata";
 }
 
+.notice.hide {
+  animation: hide 1s forwards ease-in-out !important;
+}
+
+@keyframes hide {
+  from {
+    opacity: inherit;
+  }
+
+  to {
+    opacity: 0;
+  }
+}
+
 @keyframes pulse {
   0%, 100% {
     opacity: 0.5;
