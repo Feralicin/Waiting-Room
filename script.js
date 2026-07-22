@@ -33,5 +33,5 @@ document.addEventListener("DOMContentLoaded", () => {
     }
     
     UpdateCountdown()
-    setInterval(UpdateCountdown, 500)
+    setInterval(UpdateCountdown, 10)
 })
